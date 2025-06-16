@@ -125,11 +125,15 @@
   <ItemGroup>
     <ClCompile Include="PrzygotowanieDoKolosaBlok1-4.cpp" />
     <ClCompile Include="Tablica1D.cpp" />
+    <ClCompile Include="Tablica2DCiagla.cpp" />
     <ClCompile Include="Tablica2DFragmentarycznie.cpp" />
+    <ClCompile Include="TablicaFloat.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Biblioteki.h" />
+    <ClInclude Include="Tablica.h" />
     <ClInclude Include="Tablica1D.h" />
+    <ClInclude Include="Tablica2DCiagla.h" />
     <ClInclude Include="Tablica2DFragmentarycznie.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

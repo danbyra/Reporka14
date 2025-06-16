@@ -3,18 +3,25 @@
 #include"Biblioteki.h"
 #include"Tablica1D.h"
 #include"Tablica2DFragmentarycznie.h"
+#include"Tablica.h"
+#include"Tablica2DCiagla.h"
 int main()
 {
-	int wiersz = 4;
-	int kolumna = 6;
-	char nazwa[20] = "test2D.txt";
-	int** tab1 = AlokujTablice2DFragment(wiersz, kolumna);
+	int* tab1 = AlokujTablice2DCiagla(3,3);
 
-	ZapiszDoPlikuTablice2DFragment(nazwa, tab1);
-	int** TabOdczyt = OdczytZPliku(nazwa);
-	WypiszTablice(TabOdczyt);
+	ZapiszDoPlikuTablica2DCiagla("test.txt", tab1);
 
-	DealokujTablice2DFragment(tab1);
+	int* TabOdczyt = OdczytZPlikuTablica2DCiagla("test.txt");
+
+	int wiersz = PobierzWiersze(TabOdczyt);
+	int kolumny = PobierzKolumny(TabOdczyt);
+
+	for (int i = 0; i <wiersz*kolumny; i++)
+	{
+		cout << TabOdczyt[i] << " ";
+	}
+	DealokujTablice2Dciagla(tab1);
+	DealokujTablice2Dciagla(TabOdczyt);
 }
 
 // Uruchomienie programu: Ctrl + F5 lub menu Debugowanie > Uruchom bez debugowania
